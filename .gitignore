@@ -1,0 +1,9 @@
+.idea
+assets
+db-data
+logs
+private-files
+public-files
+saas-files
+sessions
+.env
