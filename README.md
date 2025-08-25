@@ -22,25 +22,78 @@ Sobre o armazenamento deve-se considerar que a tendência é que o uso de espaç
 
 Vale lembrar que os requisitos de hardware podem variar de acordo com a latência da rede, velocidade dos cores dos cpus, uso de proxies, entre outros fatores. Recomendamos aos sysadmin da rede em que a aplicação será instalada um monitoramento de tráfego e uso durante o período de 6 meses a 1 ano para avaliação de cenário de uso. 
 
-## Docker e Docker Compose
-
 ## Instalação do Mapa Cultural
+
+A maneira mais simples e segura para instalar o Mapas Cultural é utilizando Docker e o Docker Composer para rodar a aplicação, facilitando os processos de deploy e de atualizaçao.
 
 ### Clonar o Repositório
 
-1- Clone o repositório usando SSH ou HTTPS:
+Clone o repositório usando SSH ou HTTPS:
 
 
 ```
-git@github.com:secultce/mapa-producao.git mapacultural
+git clone git@github.com:secultce/mapa-producao.git mapacultural
 ```
 
 ou 
 
 ```
-https://github.com/secultce/mapa-producao.git mapacultural
+git clone https://github.com/secultce/mapa-producao.git mapacultural
 ```
+
+### Navegar para o diretório do projeto
+
+Mude para o diretorio do projeto:
+
+```
+cd mapacultural
+```
+
+### Criação do arquivo .env
+
+Crie o arquivo .env baseado no .env.example incluído nesse repositório:
+
+```
+mv .env.example .env
+```
+
+#### Inicar os containers docker
+
+Execute o docker compose para iniciar os contêiners:
+
+```
+docker compose up -d
+```
+
+Caso seja necessário, utilize o docker compose logs para ver os logs da aplicação:
+
+```
+docker compose logs -f
+```
+
+Para para a execução dos containers execute:
+
+```
+docker compose down
+```
+
+
 
 ## Uso
 
 Depois de ter executado os containers, você pode acessar sua instância do mapa cultural em http://localhost:8080.
+
+### Usuário padrão
+
+Usuário para primeiro acesso
+
+<table>
+<tr>
+<th>email</th>
+<th>senha</th>
+</tr>
+<tr>
+<td>Admin@local</td>
+<td>mapas123</td>
+</tr>
+
