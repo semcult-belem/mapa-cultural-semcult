@@ -6,6 +6,8 @@ services:
       - /dev/null:/var/www/html/index.php
       - public-files:/var/www/html/files
       - assets:/var/www/html/assets
+      - ./public:/var/www/html/public:ro
+      - ./site.webmanifest:/var/www/html/site.webmanifest:ro
       - ./config/nginx.conf:/etc/nginx/conf.d/default.conf
     ports:
       - "8080:80"
