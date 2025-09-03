@@ -1,0 +1,18 @@
+// Brand variables for Mapa Cultural de Belém
+$brand-primary: #263868; // PRIMARY (azul)
+$brand-secondary: #70C478; // SECONDARY (verde)
+$brand-accent: #6B7A95; // ACCENT (acinzentado frio)
+$brand-navy-text: #49597A; // NAVY/TEXT
+$brand-green-dark: #53B95D; // GREEN_DARK (hover/ênfase)
+$brand-neutral: #F4F6F8; // NEUTRAL (fundo)
+$brand-beige: #F2E7D6; // BEIGE (fundo alternativo)
+
+// Semantic aliases
+$color-text: $brand-navy-text;
+$color-bg: $brand-neutral;
+$color-bg-alt: $brand-beige;
+$color-primary: $brand-primary;
+$color-primary-strong: $brand-green-dark;
+$color-secondary: $brand-secondary;
+$color-accent: $brand-accent;
+

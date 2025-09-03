@@ -1,0 +1,72 @@
+/* Brand variables and base theme for Mapa Cultural de Belém */
+:root {
+  /* Core palette */
+  --brand-primary: #263868; /* PRIMARY (azul) */
+  --brand-secondary: #70C478; /* SECONDARY (verde) */
+  --brand-accent: #6B7A95; /* ACCENT (acinzentado frio) */
+  --brand-navy-text: #49597A; /* NAVY/TEXT */
+  --brand-green-dark: #53B95D; /* GREEN_DARK (hover/ênfase) */
+  --brand-neutral: #F4F6F8; /* NEUTRAL (fundo) */
+  --brand-beige: #F2E7D6; /* BEIGE (fundo alternativo) */
+
+  /* Semantic aliases */
+  --color-text: var(--brand-navy-text);
+  --color-bg: var(--brand-neutral);
+  --color-bg-alt: var(--brand-beige);
+  --color-primary: var(--brand-primary);
+  --color-primary-strong: var(--brand-green-dark);
+  --color-secondary: var(--brand-secondary);
+  --color-accent: var(--brand-accent);
+}
+
+/* Typography helpers (fonts are injected in <head>) */
+.heading, h1, h2, h3, h4, h5, h6 { color: var(--color-text); }
+body { color: var(--color-text); background: var(--color-bg); }
+
+/* Links */
+a { color: var(--color-primary); }
+a:hover, a:focus { color: var(--color-primary-strong); }
+
+/* Buttons (generic) */
+.btn, button, [type="button"], [type="submit"], [role="button"] {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+.btn:hover, button:hover, [type="button"]:hover, [type="submit"]:hover, [role="button"]:hover {
+  background-color: var(--color-primary-strong);
+  border-color: var(--color-primary-strong);
+}
+
+/* Nav/Header defaults */
+header, .header, .navbar, .topbar { background: var(--color-primary); color: #fff; }
+header a, .header a, .navbar a, .topbar a { color: #fff; }
+
+/* Cards / panels */
+.card, .panel, .box { background: #fff; border-color: rgba(0,0,0,.06); }
+.card-header, .panel-heading { background: var(--color-bg-alt); color: var(--color-text); }
+
+/* Inputs */
+input, select, textarea { border-color: rgba(0,0,0,.2); }
+input:focus, select:focus, textarea:focus { border-color: var(--color-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent), transparent 80%); }
+
+/* Page sections */
+section.alt, .section--alt, .bg-alt { background: var(--color-bg-alt); }
+
+/* Official main heading style */
+.header-slogan {
+  font-family: var(--font-heading);
+  color: var(--brand-primary);
+  font-weight: 800;
+  font-size: clamp(28px, 5vw, 44px);
+}
+
+/* Utility to enforce brand text color */
+.text-brand { color: var(--brand-primary) !important; }
+.bg-brand { background-color: var(--brand-primary) !important; color: #fff !important; }
+
+/* Ensure CSS custom properties are available in legacy components */
+/* If any component uses hardcoded colors, we attempt to override here */
+.badge-primary, .label-primary { background: var(--color-primary) !important; }
+.badge-secondary, .label-secondary { background: var(--color-secondary) !important; }
+
